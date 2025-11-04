@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastHeadshot - AI Headshot Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Added for Cropper.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" integrity="sha512-hvNR0F/e2Jb1gfklDYge1TTvA3LFubdoOfqcRwv4ocStLwxStvtgpQdjch9+rG2klbabOuhC5TtdmHHquRVoCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js" integrity="sha512-9KkIqdfN7ipEW6B6k+Aq20PVSAaB5V/i9eLKu8mmgdCXL6UTSRjhCcsiWGBcroGHngPA3o6PA/WSKU+CINmP2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Added for JSZip -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" integrity="sha512-XMVd28F1oH/O71fzwBnV78BFXowflxgP9be8TLIZ/TUTSnRCikJbZGtvPmr
+ZGdZBgJPsdIsUYfZkiJZipA0dRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'primary': '#2563eb',
+              'primary-dark': '#1e40af',
+              'secondary': '#10b981',
+              'accent': '#f59e0b',
+              'text-dark': '#1f2937',
+              'text-light': '#6b7280',
+              'background': '#ffffff',
+              'background-alt': '#f9fafb',
+              'border-color': '#e5e7eb',
+              'error': '#ef4444',
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
